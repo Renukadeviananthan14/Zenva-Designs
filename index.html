@@ -1,1 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zenva Designs</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#faf7ff;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:26px;
+color:#6a35ff;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#6a35ff;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:100px 60px;
+background:linear-gradient(270deg,#6a35ff,#9c7bff,#cbb8ff,#f4efff);
+background-size:600% 600%;
+animation:gradientMove 12s ease infinite;
+border-bottom-left-radius:40px;
+border-bottom-right-radius:40px;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero-text{
+max-width:500px;
+color:white;
+}
+
+.hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:46px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero-text button{
+padding:12px 28px;
+border:none;
+background:white;
+color:#6a35ff;
+border-radius:25px;
+cursor:pointer;
+font-weight:500;
+transition:0.3s;
+}
+
+.hero-text button:hover{
+transform:scale(1.05);
+}
+
+.hero-image{
+width:320px;
+height:220px;
+background:white;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 60px;
+}
+
+/* ABOUT */
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:left;
+}
+
+.about h2{
+font-family:'Playfair Display',serif;
+color:#6a35ff;
+margin-bottom:10px;
+}
+
+/* FOUNDER */
+
+.founder-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+}
+
+.founder-img{
+width:180px;
+height:180px;
+border-radius:50%;
+background:linear-gradient(135deg,#cbb8ff,#f4efff);
+}
+
+.founder-text{
+text-align:right;
+max-width:500px;
+}
+
+.founder-text h2{
+font-family:'Playfair Display',serif;
+color:#6a35ff;
+}
+
+/* SERVICES */
+
+.services{
+text-align:center;
+}
+
+.services h2{
+font-family:'Playfair Display',serif;
+color:#6a35ff;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:30px;
+}
+
+.service-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* PINTEREST GALLERY */
+
+.portfolio{
+text-align:center;
+}
+
+.portfolio h2{
+font-family:'Playfair Display',serif;
+color:#6a35ff;
+margin-bottom:30px;
+}
+
+.pinterest-gallery{
+column-count:3;
+column-gap:20px;
+}
+
+.pinterest-gallery img{
+width:100%;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 8px 18px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.pinterest-gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact-box{
+background:#ede7ff;
+padding:40px;
+border-radius:10px;
+max-width:500px;
+margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+background:#6a35ff;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-image{
+margin-top:30px;
+width:100%;
+}
+
+.about{
+text-align:center;
+}
+
+.founder-content{
+flex-direction:column;
+}
+
+.founder-text{
+text-align:center;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.pinterest-gallery{
+column-count:2;
+}
+
+}
+
+@media(max-width:500px){
+
+.pinterest-gallery{
+column-count:1;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Zenva Designs</div>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Founder</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Zenva Designs</h1>
+
+<p>Elegant invitations and aesthetic event stationery crafted for your beautiful celebrations.</p>
+
+<button>Explore Designs</button>
+
+</div>
+
+<div class="hero-image"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About Zenva Designs</h2>
+
+<p>
+Zenva Designs creates elegant invitation cards and creative event stationery
+for weddings and celebrations. Our goal is to design memorable invitations
+that capture the beauty of your special moments.
+</p>
+
+</section>
+
+
+<!-- FOUNDER -->
+
+<section>
+
+<div class="founder-content">
+
+<div class="founder-img"></div>
+
+<div class="founder-text">
+
+<h2>Founder</h2>
+<h3>Founder Name</h3>
+
+<p>
+The founder of Zenva Designs believes creativity and aesthetics should
+transform celebrations into unforgettable memories.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card"><h3>Bride To Be Card</h3></div>
+<div class="service-card"><h3>Haldi Return Gift Card</h3></div>
+<div class="service-card"><h3>Event Invitation</h3></div>
+<div class="service-card"><h3>Digital Invitations</h3></div>
+<div class="service-card"><h3>Custom Card Designs</h3></div>
+<div class="service-card"><h3>Print Ready Designs</h3></div>
+<div class="service-card"><h3>Wedding Invitation Suite</h3></div>
+<div class="service-card"><h3>Social Media Creatives</h3></div>
+<div class="service-card"><h3>Theme Event Stationery</h3></div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio">
+
+<h2>Our Designs</h2>
+
+<div class="pinterest-gallery">
+
+<img src="design1.jpg">
+<img src="design2.jpg">
+<img src="design3.jpg">
+<img src="design4.jpg">
+<img src="design5.jpg">
+<img src="design6.jpg">
+<img src="design7.jpg">
+<img src="design8.jpg">
+<img src="design9.jpg">
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2 style="color:#6a35ff;margin-bottom:20px;">Contact Us</h2>
+
+<div class="contact-box">
+
+<p>Email: zenvadesigns@gmail.com</p>
+<p>Phone: +91 9876543210</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Zenva Designs</p>
+
+</footer>
+
+</body>
+</html>
